@@ -6,11 +6,11 @@
 
 # 📝 Description
 
-## Learning TypeScript in my own way by exploring all the fundementals with excercises in a object-oriented manner.
+## ⚡ Learning TypeScript in my own way by exploring all the fundementals with excercises in a object-oriented manner.
 
-### What you can learn from this repository?
+### 💡 What you can learn from this repository?
 
-#### TypeScript fundamentals like:
+#### 💎 TypeScript fundamentals like:
 
 -   Union types, Object types, Array types and etc.
 -   Classes and Interfaces
@@ -25,19 +25,19 @@
     <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="VSCode" alt="VSCode" width="45" height="45"/>
 </div>
 
-# Cloning the project
+# 🎯 Cloning the project
 
 ```bash
   git clone https://github.com/isabella-projects/typescript-oop.git
 ```
 
-## Go to the project directory
+## 📌 Go to the project directory
 
 ```bash
   cd typescript-oop
 ```
 
-# Setup Instructions
+# 📐 Setup Instructions
 
 1. Install Node Dependencies: In the project directory run:
 
@@ -51,4 +51,4 @@
   npm run dev
 ```
 
-## Enjoy! You can take a look into the code and live development server to practice with TypeScript features in a object-oriented way.
+## 🧪 Enjoy! You can take a look into the code and live development server to practice with TypeScript features in a object-oriented way.
