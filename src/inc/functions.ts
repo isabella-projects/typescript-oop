@@ -1,3 +1,5 @@
+import { Combinable } from './types';
+
 export function add(n1: number, n2: number) {
     return n1 + n2;
 }
@@ -16,4 +18,8 @@ export function generateError(message: string, code: number): never {
         errorMessage: message,
         errorCode: code,
     };
+}
+
+export function log(value: Combinable): void {
+    console.log(value);
 }

@@ -100,16 +100,38 @@ export class ITDepartment extends Department {
 }
 
 export class AccountingDepartment extends Department {
+    private lastReport: string;
+
+    get mostRecentReport() {
+        if (this.lastReport) {
+            const root = this.helper.getRoot()!;
+            this.helper.expandHtmlAndLog(root, 'Most Recent Report: ', this.lastReport);
+            return this.lastReport;
+        }
+        throw this.helper.logError('No report found', 'fatal');
+    }
+
+    set mostRecentReport(value: string) {
+        if (!value) {
+            this.helper.logError('Please pass a valid value', 'fatal');
+        }
+        this.addReport(value);
+    }
+
     constructor(id: string, private reports: string[]) {
         super(id, 'Accounting');
+        this.lastReport = reports[0];
     }
 
     addReport(text: string) {
         this.reports.push(text);
+        this.lastReport = text;
     }
 
     printReports() {
         const root = this.helper.getRoot()!;
-        this.helper.expandHtmlAndLog(root, 'Reporting', `Reports: ${this.reports}`);
+        this.reports.forEach((report, index) => {
+            this.helper.expandHtmlAndLog(root, `Report ${index + 1}`, `Report: ${report}`);
+        });
     }
 }
