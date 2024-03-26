@@ -10,7 +10,6 @@ const it = new Modules.ITDepartment('d1');
 const employee = Modules.Department.createEmployee('Brian');
 Functions.log(employee);
 /* --------------------------------------- */
-
 it.addAdmin('Robert');
 it.addEmployee('John');
 it.addEmployee('Alex');
@@ -18,7 +17,8 @@ it.printAdmins();
 it.printEmployees();
 
 /* Accounting Department is a extended subclass of our main Department */
-const accounting = new Modules.AccountingDepartment('d2', []);
+/* -- We can only once instantiate this class, because there is only 1 accounting department possible -- */
+const accounting = Modules.AccountingDepartment.getInstance();
 accounting.addEmployee('Christian');
 accounting.addEmployee('Vanessa');
 accounting.addReport('System shutdown multiple times with blue screen.');
