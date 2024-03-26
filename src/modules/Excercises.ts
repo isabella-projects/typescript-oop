@@ -58,6 +58,12 @@ export class Department {
         console.log(`Department (${this.id}): ${this.name}`);
     }
 
+    static createEmployee(employeeName: string) {
+        return {
+            name: employeeName,
+        };
+    }
+
     addEmployee(employeeName: string) {
         const employeeId = uuidv4();
 

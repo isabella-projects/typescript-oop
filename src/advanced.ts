@@ -5,9 +5,15 @@ import * as Functions from './inc/functions';
 
 /* IT Department is a extended subclass of our main Department */
 const it = new Modules.ITDepartment('d1');
+
+/* Adding an employee with a static method */
+const employee = Modules.Department.createEmployee('Brian');
+Functions.log(employee);
+/* --------------------------------------- */
+
+it.addAdmin('Robert');
 it.addEmployee('John');
 it.addEmployee('Alex');
-it.addAdmin('Robert');
 it.printAdmins();
 it.printEmployees();
 

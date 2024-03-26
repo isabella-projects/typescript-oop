@@ -14,5 +14,5 @@ export const person = {
     role: Role.OWNER,
 };
 
-export type Combinable = number | string;
+export type Combinable = number | number[] | string | string[] | object;
 export type OutputTypes = 'as-number' | 'as-text';
