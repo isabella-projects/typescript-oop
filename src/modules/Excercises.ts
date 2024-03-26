@@ -46,17 +46,15 @@ export class UnionAliases extends WelcomeMessage {
     }
 }
 
-export class Department {
+export abstract class Department {
     protected employees: { id: string; name: string }[] = [];
     protected helper: Helper;
 
-    constructor(private readonly id: string, public name: string) {
+    constructor(protected readonly id: string, public name: string) {
         this.helper = new Helper();
     }
 
-    describe(this: Department) {
-        console.log(`Department (${this.id}): ${this.name}`);
-    }
+    abstract describe(this: Department): void;
 
     static createEmployee(employeeName: string) {
         return {
@@ -86,6 +84,10 @@ export class ITDepartment extends Department {
 
     constructor(id: string) {
         super(id, 'IT');
+    }
+
+    describe() {
+        console.log('IT Department - ID: ' + this.id);
     }
 
     addAdmin(adminName: string) {
@@ -127,6 +129,10 @@ export class AccountingDepartment extends Department {
     constructor(id: string, private reports: string[]) {
         super(id, 'Accounting');
         this.lastReport = reports[0];
+    }
+
+    describe() {
+        console.log('Accounting Department - ID: ' + this.id);
     }
 
     addReport(text: string) {
