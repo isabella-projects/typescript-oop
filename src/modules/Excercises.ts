@@ -17,7 +17,7 @@ export class WelcomeMessage {
     }
 }
 
-export class ObjectToJson extends WelcomeMessage {
+export class ObjectToJSON extends WelcomeMessage {
     stringifyObject(object: Object) {
         const result = this.helper.objectToString(object);
 

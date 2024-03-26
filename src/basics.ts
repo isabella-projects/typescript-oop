@@ -9,7 +9,7 @@ const welcome = new Modules.WelcomeMessage();
 welcome.displayWelcomeMessage(true);
 
 /* Simple logging of an object into the DOM */
-const excercise2 = new Modules.ObjectToJson();
+const excercise2 = new Modules.ObjectToJSON();
 excercise2.stringifyObject(Types.person);
 
 /* Enums, Union types, Literal types and etc. */
