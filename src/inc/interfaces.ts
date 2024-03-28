@@ -5,8 +5,10 @@ export interface Person {
     greet(phrase: string): void;
 }
 
-export interface Greetable {
-    name: string;
-
+export interface Greetable extends Named {
     greet(phrase: string): void;
+}
+
+interface Named {
+    readonly name?: string;
 }

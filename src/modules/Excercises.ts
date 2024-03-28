@@ -159,11 +159,9 @@ export class AccountingDepartment extends Department {
 }
 
 export class Person implements Greetable {
-    public name: string;
     protected helper: Helper;
 
-    constructor(n: string) {
-        this.name = n;
+    constructor(public name: string) {
         this.helper = new Helper();
     }
 
