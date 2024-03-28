@@ -1,3 +1,5 @@
+import { Bird, Horse } from './interfaces';
+
 enum Role {
     OWNER = 'Owner',
     ADMIN = 'Admin',
@@ -16,3 +18,6 @@ export const person = {
 
 export type Combinable = number | number[] | string | string[] | object;
 export type OutputTypes = 'as-number' | 'as-text';
+
+/* Discriminated unions */
+export type Animal = Bird | Horse;

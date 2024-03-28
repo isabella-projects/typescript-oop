@@ -12,3 +12,13 @@ export interface Greetable extends Named {
 interface Named {
     readonly name?: string;
 }
+
+export interface Bird {
+    type: 'bird';
+    flyingSpeed: number;
+}
+
+export interface Horse {
+    type: 'horse';
+    runningSpeed: number;
+}

@@ -16,7 +16,7 @@ it.printAdmins();
 it.printEmployees();
 
 /* Accounting Department is a extended subclass of our main Department */
-/* -- We can only once instantiate this class, because there is only 1 accounting department possible -- */
+/* **SINGLETON PATTERN** */
 const accounting = Modules.AccountingDepartment.getInstance();
 accounting.addEmployee('Christian');
 accounting.addEmployee('Vanessa');
@@ -24,7 +24,6 @@ accounting.addReport('System shutdown multiple times with blue screen.');
 
 /* Adding a report for the accounting department with a setter */
 accounting.mostRecentReport = 'Year end Report';
-/* ------------------------------------------- */
 accounting.printEmployees();
 accounting.printReports();
 /* Logging the most recent report with getter to the console and to the DOM */
@@ -36,3 +35,16 @@ let user: Interfaces.Greetable;
 
 user = new Modules.Person('Mill');
 user.greet('Hi! I am');
+/* ----------------------------- */
+
+/* Discriminated Unions */
+Functions.moveAnimal({
+    type: 'bird',
+    flyingSpeed: 140,
+});
+
+Functions.moveAnimal({
+    type: 'horse',
+    runningSpeed: 50,
+});
+/* -------------------- */
