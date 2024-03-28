@@ -6,8 +6,7 @@ import * as Interfaces from './inc/interfaces';
 const it = new Modules.ITDepartment('d1');
 
 /* Adding an employee with a static method */
-const employee = Modules.Department.createEmployee('Brian');
-Functions.log(employee);
+Modules.Department.createEmployee('Brian');
 /* --------------------------------------- */
 it.addAdmin('Robert');
 it.addEmployee('John');
@@ -26,8 +25,6 @@ accounting.addReport('System shutdown multiple times with blue screen.');
 accounting.mostRecentReport = 'Year end Report';
 accounting.printEmployees();
 accounting.printReports();
-/* Logging the most recent report with getter to the console and to the DOM */
-Functions.log(accounting.mostRecentReport);
 /* ------------------------------------------------------------ */
 
 /* Interfaces */
@@ -53,3 +50,17 @@ Functions.moveAnimal({
 const typeCast = new Modules.TypeCasting();
 typeCast.attachEvents();
 /* ----------------------------------------- */
+
+/* Index Properties - Error Container example
+const invalidEmail: Interfaces.ErrorContainer = {
+    email: 'Not a valid E-Mail address.',
+    username: 'Must start with a capital character!',
+};
+
+Functions.generateError(invalidEmail, 300);
+/* ------------------------------------------ */
+
+/* Function overloads example */
+const result = Functions.add('Damyan', ' Minkov');
+result.split(' ');
+/* ------------------------------------------ */

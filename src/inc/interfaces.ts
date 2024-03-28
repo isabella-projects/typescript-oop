@@ -22,3 +22,7 @@ export interface Horse {
     type: 'horse';
     runningSpeed: number;
 }
+
+export interface ErrorContainer {
+    [prop: string]: string;
+}

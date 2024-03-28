@@ -17,6 +17,7 @@ export const person = {
 };
 
 export type Combinable = number | number[] | string | string[] | object;
+export type Combination = number | string;
 export type OutputTypes = 'as-number' | 'as-text';
 
 /* Discriminated unions */
