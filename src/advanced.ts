@@ -1,7 +1,6 @@
-import './style.css';
-
 import * as Modules from './modules/Excercises';
 import * as Functions from './inc/functions';
+import * as Interfaces from './inc/interfaces';
 
 /* IT Department is a extended subclass of our main Department */
 const it = new Modules.ITDepartment('d1');
@@ -26,10 +25,14 @@ accounting.addReport('System shutdown multiple times with blue screen.');
 /* Adding a report for the accounting department with a setter */
 accounting.mostRecentReport = 'Year end Report';
 /* ------------------------------------------- */
-
 accounting.printEmployees();
 accounting.printReports();
-
-/* Logging out the most recent report with getter to the console and to the DOM */
+/* Logging the most recent report with getter to the console and to the DOM */
 Functions.log(accounting.mostRecentReport);
 /* ------------------------------------------------------------ */
+
+/* Interfaces */
+let user: Interfaces.Greetable;
+
+user = new Modules.Person('Mill');
+user.greet('Hi! I am');

@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { Helper } from '../inc/helpers';
 import { OutputTypes } from '../inc/types';
+import { Greetable } from '../inc/interfaces';
 
 export class WelcomeMessage {
     protected helper: Helper;
@@ -154,5 +155,20 @@ export class AccountingDepartment extends Department {
         this.reports.forEach((report, index) => {
             this.helper.expandHtmlAndLog(root, `Report ${index + 1}`, `Report: ${report}`);
         });
+    }
+}
+
+export class Person implements Greetable {
+    public name: string;
+    protected helper: Helper;
+
+    constructor(n: string) {
+        this.name = n;
+        this.helper = new Helper();
+    }
+
+    greet(phrase: string) {
+        const root = this.helper.getRoot()!;
+        this.helper.expandHtmlAndLog(root, 'Interfaces', `${phrase} ${this.name}`);
     }
 }
