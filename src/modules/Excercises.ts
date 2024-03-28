@@ -170,3 +170,34 @@ export class Person implements Greetable {
         this.helper.expandHtmlAndLog(root, 'Interfaces', `${phrase} ${this.name}`);
     }
 }
+
+export class TypeCasting extends WelcomeMessage {
+    constructor() {
+        super();
+        this.showTypeCasting();
+    }
+
+    /* Just for fun */
+    attachEvents() {
+        const inputElement = document.getElementById('input-msg')! as HTMLInputElement;
+
+        inputElement.addEventListener('focus', () => {
+            inputElement.placeholder = '';
+        });
+
+        inputElement.addEventListener('blur', () => {
+            inputElement.placeholder = 'Write your message here...';
+        });
+    }
+
+    showTypeCasting() {
+        const root = this.helper.getRoot()!;
+        const element = this.helper.createTags('input', '', '', 'input-msg');
+        this.helper.expandHtml(root, element);
+
+        const input = document.getElementById('input-msg')! as HTMLInputElement;
+        input.placeholder = 'Write your message here...';
+
+        this.helper.expandHtml(root, input);
+    }
+}

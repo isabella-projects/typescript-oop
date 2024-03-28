@@ -48,3 +48,8 @@ Functions.moveAnimal({
     runningSpeed: 50,
 });
 /* -------------------- */
+
+/* Type Casting */
+const typeCast = new Modules.TypeCasting();
+typeCast.attachEvents();
+/* ----------------------------------------- */
