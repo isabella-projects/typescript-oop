@@ -13,7 +13,8 @@
 #### 💎 TypeScript fundamentals like:
 
 -   Union types, Object types, Array types and etc.
--   Classes and Interfaces
+-   Classes, Interfaces, Types, Enums
+-   Advanced types - intersection and discriminated types, Type Guards
 
 # 🛠 Tech Stack
 
