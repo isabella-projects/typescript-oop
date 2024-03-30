@@ -1,7 +1,7 @@
 import './style.css';
 
-import * as Modules from './modules/Excercises';
-import * as Types from './inc/types';
+import * as Modules from './modules/Excercise-Basic';
+import * as Arrays from './inc/arrays';
 import * as Functions from './inc/functions';
 
 /* Welcome to the excercises */
@@ -10,7 +10,7 @@ welcome.displayWelcomeMessage(true);
 
 /* Simple logging of an object into the DOM */
 const excercise2 = new Modules.ObjectToJSON();
-excercise2.stringifyObject(Types.person);
+excercise2.stringifyObject(Arrays.person);
 
 /* Enums, Union types, Literal types and etc. */
 const excercise3 = new Modules.UnionAliases();

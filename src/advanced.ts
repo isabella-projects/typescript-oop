@@ -1,4 +1,6 @@
-import * as Modules from './modules/Excercises';
+import './style.css';
+
+import * as Modules from './modules/Excercise-Advanced';
 import * as Functions from './inc/functions';
 import * as Interfaces from './inc/interfaces';
 
