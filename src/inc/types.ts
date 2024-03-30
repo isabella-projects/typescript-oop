@@ -16,6 +16,15 @@ export const person = {
     role: Role.OWNER,
 };
 
+export const fetchUserData = {
+    id: 'user-1',
+    name: 'John',
+    job: {
+        title: 'CEO',
+        description: 'Coding Acadamey',
+    },
+};
+
 export type Combinable = number | number[] | string | string[] | object;
 export type Combination = number | string;
 export type OutputTypes = 'as-number' | 'as-text';

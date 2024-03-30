@@ -51,6 +51,11 @@ const typeCast = new Modules.TypeCasting();
 typeCast.attachEvents();
 /* ----------------------------------------- */
 
+/* Function overloads example */
+const result = Functions.add('Damyan', ' Minkov');
+result.split(' ');
+/* ------------------------------------------ */
+
 /* Index Properties - Error Container example
 const invalidEmail: Interfaces.ErrorContainer = {
     email: 'Not a valid E-Mail address.',
@@ -58,9 +63,4 @@ const invalidEmail: Interfaces.ErrorContainer = {
 };
 
 Functions.generateError(invalidEmail, 300);
-/* ------------------------------------------ */
-
-/* Function overloads example */
-const result = Functions.add('Damyan', ' Minkov');
-result.split(' ');
 /* ------------------------------------------ */
