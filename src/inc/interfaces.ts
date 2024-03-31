@@ -26,3 +26,7 @@ export interface Horse {
 export interface ErrorContainer {
     [prop: string]: string;
 }
+
+export interface Lengthy {
+    length: number;
+}

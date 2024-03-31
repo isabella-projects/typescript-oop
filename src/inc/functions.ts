@@ -27,8 +27,10 @@ export function generateError(message: ErrorContainer, code: number): never {
     };
 }
 
-export function log(value: Combinable): void {
-    console.log(value);
+export function log(...values: Combinable[]) {
+    for (let value of values) {
+        console.log(value);
+    }
 }
 
 export function moveAnimal(animal: Animal) {
