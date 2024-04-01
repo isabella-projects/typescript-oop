@@ -26,3 +26,8 @@ export const promise: Promise<string> = new Promise((resolve, reject) => {
 
     reject('Not allowed');
 });
+
+export const moreNames: Readonly<string[]> = ['George', 'Anna'];
+// Not possible due to Readonly utility type \\
+// moreNames.push('Alex');
+// moreNames.pop();

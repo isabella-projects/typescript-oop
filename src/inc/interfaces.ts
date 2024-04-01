@@ -30,3 +30,9 @@ export interface ErrorContainer {
 export interface Lengthy {
     length: number;
 }
+
+export interface CourseGoal {
+    title: string;
+    description: string;
+    completeUntil: Date;
+}

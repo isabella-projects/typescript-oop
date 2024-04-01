@@ -1,6 +1,7 @@
 import './style.css';
 
 import * as Modules from './modules/Excercise-Generics';
+import * as Functions from './inc/functions';
 
 /* Generic methods */
 const generics = new Modules.Generics();
@@ -38,3 +39,7 @@ numberStorage.addItem([3, 4, 5, 9, 24]);
 numberStorage.sortItems();
 numberStorage.removeItem(24);
 numberStorage.getItems().log();
+
+// Partial generics \\
+const courseGoal = Functions.createGoal('TypeScript', 'Finish the course next week', new Date(2024, 3, 7));
+Functions.log(courseGoal);

@@ -1,5 +1,4 @@
 import { Helper } from '../inc/helpers';
-import * as Functions from '../inc/functions';
 import * as Interfaces from '../inc/interfaces';
 
 export class Generics {
@@ -44,7 +43,7 @@ export class Generics {
     }
 }
 
-export class DataStorage<T> {
+export class DataStorage<T> extends Generics {
     private data: T[] = [];
 
     addItem(items: T | T[]) {
@@ -65,7 +64,8 @@ export class DataStorage<T> {
         return {
             item: items,
             log: () => {
-                Functions.log(items);
+                const root = this.helper.getRoot()!;
+                this.helper.expandHtmlAndLog(root, 'Items', this.helper.objectToString(items));
             },
         };
     }
