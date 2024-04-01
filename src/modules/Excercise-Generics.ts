@@ -1,4 +1,5 @@
 import { Helper } from '../inc/helpers';
+import * as Functions from '../inc/functions';
 import * as Interfaces from '../inc/interfaces';
 
 export class Generics {
@@ -40,5 +41,41 @@ export class Generics {
 
     joinArray<T>(array: T[]): string {
         return array.join(' ');
+    }
+}
+
+export class DataStorage<T> {
+    private data: T[] = [];
+
+    addItem(items: T | T[]) {
+        if (Array.isArray(items)) {
+            this.data.push(...items);
+        } else {
+            this.data.push(items);
+        }
+    }
+
+    removeItem(item: T) {
+        this.data.splice(this.data.indexOf(item), 1);
+    }
+
+    getItems() {
+        const items = [...this.data];
+
+        return {
+            item: items,
+            log: () => {
+                Functions.log(items);
+            },
+        };
+    }
+
+    sortItems() {
+        this.data.sort((a, b) => {
+            if (typeof a === 'number' && typeof b === 'number') {
+                return a - b;
+            }
+            return 0;
+        });
     }
 }
