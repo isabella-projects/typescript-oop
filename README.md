@@ -15,6 +15,7 @@
 -   Union types, Object types, Array types and etc.
 -   Classes, Interfaces, Types, Enums
 -   Advanced types - intersection and discriminated types, Type Guards
+-   Generics, Decorators
 
 # 🛠 Tech Stack
 
