@@ -1,3 +1,5 @@
+import { registeredValidators } from './arrays';
+
 /* Decorator factories */
 export function Logger(logString: string) {
     return function (constructor: Function) {
@@ -60,4 +62,19 @@ export function Autobind(_: any, _2: string | Symbol, descriptor: PropertyDescri
         },
     };
     return adjustDescriptor;
+}
+
+/* Validation decorators */
+export function Required(target: any, propName: string) {
+    registeredValidators[target.constructor.name] = {
+        ...registeredValidators[target.constructor.name],
+        [propName]: [...(registeredValidators[target.constructor.name]?.[propName] ?? []), 'required'],
+    };
+}
+
+export function PositiveNumber(target: any, propName: string) {
+    registeredValidators[target.constructor.name] = {
+        ...registeredValidators[target.constructor.name],
+        [propName]: [...(registeredValidators[target.constructor.name]?.[propName] ?? []), 'positive'],
+    };
 }

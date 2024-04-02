@@ -1,3 +1,4 @@
+import { registeredValidators } from './arrays';
 import { Helper } from './helpers';
 import { ErrorContainer, CourseGoal } from './interfaces';
 import { Combinable, Combination, Animal } from './types';
@@ -66,4 +67,29 @@ export function createGoal(title: string, description: string, date: Date): Cour
     helper.expandHtmlAndLog(root, 'Main Goal', helper.objectToString(goal));
 
     return goal as CourseGoal;
+}
+
+export function validate(obj: any) {
+    const objectValidator = registeredValidators[obj.constructor.name];
+
+    if (!objectValidator) {
+        return true;
+    }
+
+    let isValid = true;
+
+    for (const prop in objectValidator) {
+        for (const validator of objectValidator[prop]) {
+            switch (validator) {
+                case 'required':
+                    isValid = isValid && !!obj[prop];
+                    break;
+                case 'positive':
+                    isValid = isValid && obj[prop] > 0;
+                    break;
+            }
+        }
+    }
+
+    return isValid;
 }

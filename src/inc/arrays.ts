@@ -1,3 +1,4 @@
+import { ValidatorConfig } from './interfaces';
 import { Role } from './types';
 
 export const person = {
@@ -19,15 +20,15 @@ export const fetchUserData = {
 
 export const names: Array<string> = ['Max', 'Manuel'];
 
-export const promise: Promise<string> = new Promise((resolve, reject) => {
+export const promise: Promise<string> = new Promise((resolve, _reject) => {
     setTimeout(() => {
         resolve('Done');
     }, 2000);
-
-    reject('Not allowed');
 });
 
 export const moreNames: Readonly<string[]> = ['George', 'Anna'];
 // Not possible due to Readonly utility type \\
 // moreNames.push('Alex');
 // moreNames.pop();
+
+export const registeredValidators: ValidatorConfig = {};

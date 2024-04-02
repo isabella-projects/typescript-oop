@@ -43,3 +43,15 @@ export class Printer {
         console.log(this.message);
     }
 }
+
+export class Course {
+    @Decorators.Required
+    title: string;
+    @Decorators.PositiveNumber
+    price: number;
+
+    constructor(t: string, p: number) {
+        this.title = t;
+        this.price = p;
+    }
+}

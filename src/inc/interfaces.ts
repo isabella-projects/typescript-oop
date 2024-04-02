@@ -36,3 +36,9 @@ export interface CourseGoal {
     description: string;
     completeUntil: Date;
 }
+
+export interface ValidatorConfig {
+    [property: string]: {
+        [validateableProp: string]: string[]; // ['required', 'positive']
+    };
+}
