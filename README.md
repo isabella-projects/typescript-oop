@@ -8,14 +8,19 @@
 
 ## ⚡ Learning TypeScript in my own way by exploring all the fundementals with excercises in a object-oriented manner.
 
-### 💡 What you can learn from this repository?
+### 💡 What did I learn through this and published in this repository?
 
 #### 💎 TypeScript fundamentals like:
 
 -   Union types, Object types, Array types and etc.
 -   Classes, Interfaces, Types, Enums
 -   Advanced types - intersection and discriminated types, Type Guards
--   Generics, Decorators
+-   Generics & Decorators
+-   Modules & Namespaces and more..
+-   2 projects (published in separate repositories)
+-   TypeScript w/ tools like: Vite and Webpack
+-   TypeScript w/ React.js
+-   TypeScript w/ Node.js + Express
 
 # 🛠 Tech Stack
 
